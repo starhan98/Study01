@@ -7,9 +7,10 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/ivBack"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:contentDescription="TODO"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -17,60 +18,109 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/rainy04" />
-
-    <Button
-        android:id="@+id/sunnyButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginBottom="100dp"
-        android:text="맑음"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/cloudyButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
-        android:text="흐림"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/rainyButton"
-        app:layout_constraintStart_toEndOf="@+id/sunnyButton" />
-
-    <Button
-        android:id="@+id/rainyButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="100dp"
-        android:text="비"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:srcCompat="@drawable/sunny01" />
 
     <ImageView
-        android:id="@+id/imageBox"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:scaleType="center"
+        android:id="@+id/ivTempBack"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="10dp"
+        android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/ivBack"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:srcCompat="@drawable/box0" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivBack"
+        app:layout_constraintVertical_bias="0.123"
+        app:srcCompat="@drawable/box1" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="비 오는 날"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
+    <ImageView
+        android:id="@+id/ivOthersBack"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ivBack"
+        app:layout_constraintTop_toTopOf="@+id/ivBack"
+        app:layout_constraintVertical_bias="0.85"
+        app:srcCompat="@drawable/box2" />
+
+    <TextView
+        android:id="@+id/tvCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:text="서울"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivTempBack"
+        app:layout_constraintEnd_toEndOf="@+id/ivTempBack"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ivTempBack"
+        app:layout_constraintTop_toTopOf="@+id/ivTempBack"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:text="Temperature"
+        android:textColor="#FFFFFF"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivTempBack"
+        app:layout_constraintEnd_toEndOf="@+id/ivTempBack"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ivTempBack"
+        app:layout_constraintTop_toBottomOf="@+id/tvCity"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvHumid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20%"
+        android:textColor="#FFFFFF"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivOthersBack"
+        app:layout_constraintEnd_toEndOf="@+id/ivOthersBack"
+        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintStart_toStartOf="@+id/ivOthersBack"
+        app:layout_constraintTop_toTopOf="@+id/ivOthersBack"
+        app:layout_constraintVertical_bias="0.66666" />
+
+    <TextView
+        android:id="@+id/tvWind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20%"
+        android:textColor="#FFFFFF"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivOthersBack"
+        app:layout_constraintEnd_toEndOf="@+id/ivOthersBack"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/ivOthersBack"
+        app:layout_constraintTop_toTopOf="@+id/ivOthersBack"
+        app:layout_constraintVertical_bias="0.66666666" />
+
+    <TextView
+        android:id="@+id/tvClouds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20%"
+        android:textColor="#FFFFFF"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivOthersBack"
+        app:layout_constraintEnd_toEndOf="@+id/ivOthersBack"
+        app:layout_constraintHorizontal_bias="0.87"
+        app:layout_constraintStart_toStartOf="@+id/ivOthersBack"
+        app:layout_constraintTop_toTopOf="@+id/ivOthersBack"
+        app:layout_constraintVertical_bias="0.666666" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
